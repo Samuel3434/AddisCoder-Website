@@ -170,7 +170,7 @@ p.details{
 }
 .card1{
   grid-area: left;
-  background: url('../assets/homepage/ai-generated-8775235_1920.png');
+  background: url('/AddisCoder-Website/assets/homepage/ai-generated-8775235_1920.png');
   background-position: center;
   background-size: 170%;
   /* background-repeat: no-repeat;
