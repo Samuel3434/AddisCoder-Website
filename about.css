@@ -1,0 +1,149 @@
+:root {
+  --cards: 4;
+  --cardHeight: 87vh;
+  --cardTopPadding: 1.5em;
+  --cardMargin: 2rem;
+}
+#about{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 190vh;
+  margin: 5rem 0;
+  font-family: 'poppins';
+
+}
+.S3container {
+  width: 80%;
+  display: grid;
+  place-content: center;
+  height: inherit;
+}
+
+#S3cards {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  gap: 5rem;
+  place-content: center;
+  height: inherit;
+}
+
+.S3card {
+  /* height: auto; */
+  /* margin-bottom: var(--cardMargin);
+  padding-top: calc(var(--index) * var(--cardTopPadding)); */
+  border-radius: 5rem;
+  overflow: hidden  ;
+  box-sizing: border-box;
+  display: flex;
+  /* background-color: rgba(0, 0, 0, 0.3); */
+  /* background-color: var(--primary-color-light); */
+  background-color: rgba(255, 255, 255, 0.4);
+  border: 1.5px rgba(255, 255, 255, 0.9) solid  ;
+  align-items: center;
+  justify-content: center ;
+}
+.S3card-body {
+  display: flex;
+  flex-direction: column;
+  /* background: var(--primary-color-light); */
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  /* flex-basis: content; */
+  font-family: "poppins", serif;
+  /* box-sizing: border-box; */
+  border-radius: 5rem;
+  /* box-shadow: 0 0 30px 0 var(--accent-color); */
+  height: 100%;
+
+}
+.S3card-body h1 {
+  align-self: center;
+  /* width: 100%; */
+  font-family: 'Montserrat Subrayada';
+  font-size: 6rem;
+  margin: 0;
+  text-align: center;
+  font-weight: bolder;
+}
+.S3card-body h2{
+  font-size: 2rem;
+  margin: 5px 0;
+  text-decoration: underline;
+}
+.S3card .inner-text {
+  width: 80%;
+  font-size: 2rem;
+  text-align: center;
+  line-height: 35px;
+}
+#S3cards2 li{
+  font-size: 2rem;
+}
+/* #S3cards1 .S3card-body {
+  background-color: var(--background -color);
+}
+
+#S3cards2 .S3card-body {
+  background-color: var(--secondary-color);
+}
+
+#S3cards3 .S3card-body {
+  background-color: var(--secondary-color); */
+/* } */
+
+
+
+.curriculum strong {
+  font-size: 1.4rem;
+}
+
+.show {
+  animation: heii .5s ease forwards;
+}
+
+@keyframes heii {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.show1 {
+  animation: heii1 .5s ease forwards;
+}
+
+@keyframes heii1 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+#S3cards1 {
+  grid-area: 2 / 1 / 10 / 1;
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+}
+
+#S3cards2 {
+  grid-area: 1 / 2 / 6 / 2;
+}
+
+#S3cards3 {
+  grid-area: 6 / 2 / 11 / 2;
+}
+
+
+/* #S3cards4 {
+  height: max-content;
+  grid-area: 3 / 2 / 4 / 3;
+} */

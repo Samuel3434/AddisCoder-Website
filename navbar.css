@@ -1,0 +1,120 @@
+.navbar {
+  position: fixed;
+  top: 20px;
+  right: 5.5rem;
+  z-index: 10000000 ;
+  align-self: center;
+}
+
+.ham-menu {
+  position: relative;
+  background-color: transparent;
+  height: 4rem;
+  width: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer; 
+  margin-top: 0.5rem;
+}
+
+.ham {
+  width: 4rem;
+  height: 0.5rem;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+  position: relative; 
+  transition: transform 0.3s ease;
+}
+
+.ham::before,
+.ham::after {
+  content: '';
+  position: absolute;
+  width: 4rem;
+  height:0.5rem; 
+  background-color: var(--accent-color);
+  border-radius: 2px;
+  transition: transform 0.3s ease;
+}
+
+.ham::before {
+  top: -10px;
+}
+
+.ham::after {
+  bottom: -10px; 
+}
+
+.navbar.open .ham {
+  transform: rotate(45deg);
+}
+
+.navbar.open .ham::before {
+  transform: rotate(90deg);
+  top: 0; 
+}
+
+.navbar.open .ham::after {
+  transform: rotate(90deg); 
+  bottom: 0; 
+}
+
+
+.main-navbar{
+  position: fixed;
+  top: 0;
+  right: 0;
+  background: var( --primary-color-light);
+  backdrop-filter: blur(10px); 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 0.1rem solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 30rem;
+  z-index: 10;
+  transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275)1s;
+  transform-origin: right;
+  transform: translateX(200%);
+}
+.main-navbar  a{
+  text-decoration: none;
+  color: inherit;
+  width: inherit;
+  height: inherit;
+}
+.menus{
+  width: 20rem;
+  display: flex;
+  margin-top:4rem;
+}
+.menu-ul{
+  list-style-type: none; 
+  background-color: blur(10px);
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0;
+}
+.menu-ul li{
+  display: inline-block;
+  color:white;
+  font-family: poppins;
+  padding: 0.8rem 2rem;
+  margin:8px 0;
+  font-size: 1.8rem;
+  text-align: center;
+  width: 75%;
+  height: 2rem;
+  border-radius: 5px;
+}
+.menu-ul li:hover{
+  background-color: var(--accent-color);
+}

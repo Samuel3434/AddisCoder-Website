@@ -1,0 +1,270 @@
+html{
+  font-size:70%;
+  width: 100%;
+  height: 100vh;
+}
+body{
+  margin: 0 ;
+  padding-bottom: 11rem;
+}
+.homepage{
+
+  /* max-width: 1200px; */
+  margin: 0 5em;
+  height: 100vh;
+  display: flex;
+}
+main{
+  display: flex;
+  gap: 8rem;
+  margin-top: 8rem;
+  /* margin-bottom: 11rem; */
+  justify-content: center;
+  align-items: center;
+
+  flex-grow: 1;
+}
+.left-col{
+  width: 45%;  
+  text-align: center;
+}
+.right-col{
+  flex-grow: 1;
+  /* display: block; */
+  width: 10%;
+  height: 65vh;
+
+}
+.homepage h1{
+  font-size: 7rem;
+  font-weight: bold;
+  margin: 0;
+  line-height:normal;
+  /* font-family: 'Lilita One'; */
+  font-family: 'Lobster';
+  letter-spacing: 0.5rem;
+  background-image: url('assets/homepage/computer-8070002_1280.jpg');
+  background-size: cover;
+  background-clip: text;
+  background-position: 30% 50%;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.sub-head{
+  font-size: 1.8rem;
+  font-family: 'Roboto';
+  line-height: calc(normal+2px);
+  margin: 2rem auto;
+}
+.cta-btn{
+  display: flex;
+  gap: 2em;
+  justify-content: center;
+
+}
+.cta-btn-txt {
+  z-index: 10;
+}
+
+.primary-cta{
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  border: 2px var(--secondary-color) solid;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 1.9rem;
+  padding: 1em 2em;
+  text-align: center;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1)0.4s;
+  position: relative;
+  overflow: hidden;
+  outline: none;
+  width: 70%;
+  z-index: 1;
+  transition: all ease-in 0.5s;
+}
+.primary-cta::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 0;
+  background-color: var(--accent-color);
+  bottom: -50%;
+  right: 0;
+  transition: all cubic-bezier(0.215, 0.610, 0.355, 1)0.8s;
+  z-index: -1;
+
+}
+
+.primary-cta:hover span{
+  z-index: 1000;
+}
+.primary-cta:hover::before{
+  height: 200%;
+  border-radius: 25%;
+}
+.primary-cta:hover{
+  border: 0;
+  
+  box-shadow: 0rem 0rem 50px 0 var(--accent-color);
+}
+
+
+.news{
+  display: flex;
+  gap:3em;
+  padding: 3em;
+  border: 1px solid black;
+  border-radius: .8rem;
+  margin-top: 2rem;
+  position:relative;
+}
+.news::before{
+  position:absolute;
+  content:'';
+  background: url('./assets//homepage/streamer-8126172_1280.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;
+  top: -20px;
+  left:-20px;
+  z-index: 2;
+
+}
+p.employees{
+  font-size: 4rem;
+  margin:0;
+  font-weight: 200;
+  line-height: 100%;
+  font-family: "Montserrat Subrayada", sans-serif;
+}
+p.details{
+  font-size:1.4rem;
+  margin: 0;
+  font-family: "Montserrat Subrayada", sans-serif;
+}
+.right-col{
+  display: grid;
+  flex-grow: 1;
+  gap: 2.3rem;
+  height: 100%;
+  grid-template-columns: repeat(2,auto);
+  grid-template-areas: 
+  "left ."
+  "left .";
+}
+.card{
+    background-color: var(--secondary-color);
+    border-radius: 0.8em;
+    /* height: 100%; */
+    padding: 1.1em;
+    display: flex;
+    align-items:end;
+    /* background: url(./assets/addiscoder2-logo.jpg); */
+    background-size: 150%;
+    transition: all cubic-bezier(0.215, 0.610, 0.355, 1)0.8s;
+
+}
+.card1{
+  grid-area: left;
+  background: url('/assets/homepage/ai-generated-8775235_1920.png');
+  background-position: center;
+  background-size: 170%;
+  /* background-repeat: no-repeat;
+  background-size: cover;
+  transition: all cubic-bezier(0.215, 0.610, 0.355, 1) 0.8s;
+  transition: all 2s ease; */
+}
+.card2{
+  background: url('/assets/homepage/ai-generated-8775232_1920.png');
+  /* background-position: 75% 80%; */
+  background-position: center;
+  background-size: 150%;
+}
+.card3{
+  background: url('/assets/homepage/developer-8764523_1280.jpg');
+  background-position: center;
+  background-size: 150%;
+}
+
+.card-details{
+  background:var(--secondary-color);
+  border-radius: 1em;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all cubic-bezier(0.215, 0.610, 0.355, 1)0.4s;
+  padding: 1.5rem 1.6rem;
+  gap: 1rem;
+}
+.card-details a{
+  color: white;
+  margin: 0;
+  font-size:1.2rem;
+  font-weight:bold;
+  font-family: 'Poppins';
+  text-decoration: none;
+}
+.card-details p{
+  margin: 0;
+  font-size:1.4rem;
+ 
+
+}
+.promo-logo{
+  font-size:1.8rem;
+  font-family: 'Poppins';
+  filter: invert(1);
+  text-decoration: none;
+}
+.card:hover{
+  background-size: 210%;
+}
+.card1:hover{
+  background-size: 230%;
+}
+.card:hover .card-details{
+  transform: translateY(-10px);
+}
+
+
+
+
+
+
+
+/* into animatoin */
+.overlay{
+  position: fixed;
+  z-index: 99;
+  background-color: var(--background-color);
+  width: 100%;
+  height: 100vh;
+  animation: reveal 1.5s ease-in forwards;
+  transform-origin: bottom;
+  z-index: 10000;
+}
+
+@keyframes reveal {
+ from{
+  transform: scaleY(1);
+ }
+ to{
+  transform: scaleY(0);
+ }
+ } 
+ main{
+  animation: growin 2s cubic-bezier(0.215, 0.610, 0.355, 1) forwards;
+  transform: scale(0.4);
+ }
+@keyframes growin {
+  to{
+    transform: scale(1);
+  }
+  
+}
+

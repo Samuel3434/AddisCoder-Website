@@ -1,0 +1,103 @@
+.banner{
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  /* margin-top: 20rem; */
+  padding-top: 10rem;
+}
+.banner .slider{
+  position: absolute;
+    width: 10rem;
+    height: 15rem;
+    top: 5%;
+    left: calc(50% - 100px);
+    transform-style: preserve-3d;
+    transform: perspective(700px);
+    animation: autoRun 20s linear infinite;
+    z-index: 2;
+}
+/* .banner .slider2{
+    position: absolute;
+    width: 300rem;
+    height: 15rem;
+    top: 8%;
+    left: -820px;
+    transform-style: preserve-3d;
+    transform: perspective(700px);
+    animation: autoRun 20s linear infinite;
+    z-index: -2;
+} */
+
+
+@keyframes autoRun{
+    from{
+        transform: perspective(700px) rotateX(-20deg) rotateY(0deg);
+    }to{
+        transform: perspective(700px) rotateX(-20deg) rotateY(360deg);
+    }
+}
+.banner .slider .item{
+    position: absolute;
+    inset: 0 0 0 0;
+    transform: 
+      rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+        translateZ(350px);
+}
+/* .banner .slider2 .item{
+    position: absolute;
+    inset: 0 0 0 0;
+    transform: 
+        rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+        translateZ(420px);
+} */
+
+/* .slider2{
+  z-index: -5;
+} */
+.banner .slider .item img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* .banner .slider2 .item img{ */
+  /* width: 80%;
+  height: 80%; */
+  /* height: 10rem;
+  object-fit: cover;
+} */
+/* ./* .banner .content{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(1400px, 100vw);
+    height: max-content;
+    padding-bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+} */
+
+.professors {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position:relative
+}
+.professors div{
+  z-index: 2;
+}
+
+.model {
+    height: 35vh;
+    top:6rem;
+    position: absolute;
+    top:100px;
+    left: 40%;
+    background-position: top center; 
+    z-index: 1;
+}

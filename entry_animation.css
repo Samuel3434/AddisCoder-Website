@@ -1,0 +1,54 @@
+.typewriter {
+  color: var(--text-color);
+  font-style: 'Inconsolata',monospace;
+  background-color: var(--secondary-color);
+  width: fit-content;
+  height: fit-content;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  font-size: 2rem;
+  border-radius: 10px;
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: show 2s forwards;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+    height: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+    height: 2.5rem;
+  }
+}
+
+.ent_ani_after {
+  animation: ent-ani-after 2s forwards;
+}
+
+@keyframes ent-ani-after {
+  from {
+    opacity: 1;
+    transform: translateX(0); 
+    height: 2.5rem;
+  } 
+  to {
+    opacity: 0;
+    transform: translateX(-50px);
+    height: 0;
+  }
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}

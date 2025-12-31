@@ -1,0 +1,120 @@
+.hisroty{
+  background-color: var(--background-color);
+  height: 100vh;
+  padding: 100rem;
+}
+.timeline{
+  position: relative;
+  max-width: 120rem;
+  margin: 10rem auto;
+}
+.his-container{
+  padding: 10px 50px;
+  position: relative;
+  width: 50%;
+  /* animation: down 1s linear forwards; */
+}
+/* @keyframes down {
+  0%{
+    opacity: 1;
+    transform: translateY(-30px);
+  }
+  100%{
+    opacity:1 ;
+  }
+  
+} */
+.his-container .text-box{
+  padding: 20px 30px;  
+  background-color: white;
+  position: relative;
+  border-radius: 1rem;
+  font-size: 2rem;  
+}
+.his-left-container{
+  left: -11.5%;
+}
+.his-right-container{
+  left: 50%;
+}
+/* .container */
+.his-container .year{
+  font-size: 2rem;
+  font-weight: bold;
+  position: absolute;
+  width: 8rem;
+  height: 5rem;
+  /* background-color: gray; */
+  /* background: linear-gradient(to right, #00d2ff, #3a6bd5); */
+  background-color: #0a1bb7;
+  color: white;
+  display: grid;
+  place-content: center;
+  border-radius: 4rem;
+  right: -6rem;
+  top: 30%;
+  z-index: 1;
+}
+.his-right-container .year{
+  left: -6.5rem;
+}
+.timeline .line{
+  position: absolute;  
+  width: 1rem;
+  height: 0;
+  /* background-color: gray; */
+  /* background: linear-gradient(to right, #00d2ff, #3a6bd5); */
+  background-color: #0a1bb7;
+  border-radius: 1rem;
+  top:0;
+  left:47.5%;
+  margin-left:-2px;
+  z-index: -1;
+  transition: all ease 1s;
+  transition-delay: 0.2s;
+
+  /* animation: growing 6s linear forwards; */
+}
+.his-left-container::after{
+  content: '';
+  height: auto;
+  width: 0rem;
+  position: absolute;
+  top: 40%;
+  z-index: 1;
+  border-top: 5rem solid transparent;
+  border-bottom: 5rem solid transparent;
+  border-left: 5rem solid white;
+  top: 30%; 
+  right: 25px;
+  z-index: -2;
+}
+@keyframes growing {
+  0%{
+    height: 0;
+  }
+  100%{
+    height: 100%;
+  }
+  
+}
+.his-right-container::before{
+  content: '';
+  height: auto;
+  width: 0rem;
+  position: absolute;
+  top: 40%;
+  z-index: 1;
+  border-top: 5rem solid transparent;
+  border-bottom: 5rem solid transparent;
+  border-right: 5rem solid white;
+  top: 30%; 
+  left: 25px;
+  z-index: -2;
+}
+.his-title{
+  margin-left: 10rem;
+  font-size: 5rem;
+  font-family: 'Courier New', Courier, monospace;
+  align-self: center;
+}

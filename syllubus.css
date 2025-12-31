@@ -1,0 +1,113 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.home {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle, #2E3A59, #1C77C3, #39A9DB);
+  margin: 0; 
+  padding: 0;
+}
+
+.home h1 {
+  font-size: 20rem;
+}
+
+.materials {
+  margin: 10rem 0;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  gap: 20px;
+  padding: 0 5rem;
+}
+
+.slider-wrapper{
+  height: 90vh;
+  margin-top: 5rem;
+  scroll-snap-type: x mandatory;
+  display: flex;
+  flex-direction: column;
+  padding-left: 10rem;
+}
+.card-list{
+  margin: 0 2rem;
+  height: 80vh;
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  column-gap: 5rem;
+  justify-content: center;
+  align-items: center;
+  overflow-y: hidden;
+  scroll-snap-align: center;
+}
+.y2024 {
+  flex: 0 0 auto;
+  width: 50rem; /* Ensure width is explicitly set */
+  height: 40rem;
+  background-color: #1C77C3; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 2rem;
+}
+
+.week {
+  position: relative;
+  width: 80%;
+  overflow: hidden; /* Ensures content is hidden when collapsed */
+  transition: max-height 0.5s ease-out; /* Smooth transition for collapsing */
+  max-height: 4rem;
+}
+
+.week.collapsed {
+  max-height: 25rem; /* Collapsed state */
+}
+
+.week-title {
+  font-size: 1.5rem; /* Adjust as needed */
+  color: #ffffff; /* Adjust based on your color scheme */
+  padding: 1rem; /* Space around the title */
+  background-color: #333333; /* Background color for the title */
+  border-radius: 0.5rem;
+  text-align: center;
+  margin: 0;
+  cursor: pointer; /* Indicate that the title is clickable */
+}
+.day-con{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.day {
+  display: block;
+  width: 80%;
+  height: 3rem; 
+  background-color: white;
+  margin: 0.3rem 0; 
+  border-radius: 0.5rem;
+  text-decoration: none; 
+  color: #2E2E2E; 
+  padding: 0.5rem; 
+  box-sizing: border-box;
+  line-height: 3rem; 
+  text-align: center; 
+}
+
+.day:hover {
+  background-color: #f0f0f0; /* Hover effect for links */
+}
+
+.y2024 h1 {
+  margin: 0;
+  height: min-content;
+  font-size: 5rem;
+}

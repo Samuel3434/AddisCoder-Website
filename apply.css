@@ -1,0 +1,212 @@
+.inner-container {
+  --container-background : linear-gradient(90deg, #9c27b0, #f3f5f5 );
+  --changeAndApply-btn-background: linear-gradient(135deg, #4B0082, #8A2BE2, #BA55D3, #4B0082);
+
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  /* background-color: #121321; */
+  background-color: var(--background-color);
+  padding: 5rem 0rem;
+  perspective: 1000px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 11rem auto;
+}
+
+.inner-container::before {
+  content: "";
+  position: absolute;
+  height: 340px;
+  width: 340px;
+  border-radius: 50%;
+  transform: translate(-300px, -350px);
+  /* background: linear-gradient(90deg, #9c27b0, #f3f5f5 ); */
+  background: var(--container-background);
+}
+
+.inner-container::after {
+  content: "";
+  position: absolute;
+  height: 340px;
+  width: 340px;
+  border-radius: 50%;
+  transform: translate(300px, 350px);
+  /* background: linear-gradient(90deg, #9c27b0, #f3f5f5 ); */
+  background: var(--container-background);
+}
+
+
+.apply-student {
+  height: 70rem;
+  width: 60rem;
+  position: relative;
+  z-index: 100;
+  transition: all .2s ease;
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.apply-student .card{ 
+  backface-visibility: hidden;
+}
+.apply-student .card{
+  position: absolute;
+  height: 90%;
+  width: 80%;
+  backdrop-filter: blur(25px);
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px  45px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2.5rem;
+  line-height: 2.3rem;
+  font-size: 1.7rem;
+  font-family: poppins;
+  /* color: white; */
+  color:var(--text-color);
+  display: flex;
+  flex-direction: column;
+  
+}
+.apply-student .next-text{
+transform: rotateY(180deg);  
+  
+}
+
+.apply-student-click {
+  transform: rotateY(180deg)
+}
+
+.change-btn-container{
+  position: absolute;
+  top: -1rem;
+  right: 35%;
+}
+
+/* .CB-at-teacher{
+  background: linear-gradient(135deg, #0033A0, #0066FF, #3399FF, #0033A0);
+}
+.CB-at-student{
+  background: linear-gradient(135deg, #4B0082, #8A2BE2, #BA55D3, #4B0082);
+} */
+
+.change-btn{
+  padding: 2rem 5rem;
+  padding-right: 11rem;
+  font-size: 1.8rem;
+  border-radius: 2rem;
+  border: none;
+  background: var(--changeAndApply-btn-background);
+  background-size: 200%;
+  background-position: 50% 50%;
+  animation: ani10 3s infinite;
+  color: var(--background-color);
+  position: relative;
+  
+}
+.change-btn-student{
+  position: absolute;
+  top: -100%;
+  right: 17%;
+  transition: all ease-in-out 2s;
+}
+.change-btn-teacher{
+  position: absolute;
+  top: 34%;
+  right: 17%;
+  transition: all ease-in-out 2s;
+}
+
+.aniIn{
+  animation: aniIn 1s ease-in-out forwards;
+}
+.aniOut{
+  animation: aniOut 1s ease-in-out forwards;
+}
+@keyframes aniIn {
+  0%{
+    top: -100%;
+  }
+
+  100%{
+    top: 34%;
+  }
+}
+@keyframes aniOut {
+  
+  0%{
+    top: 34%;
+  }
+
+  100%{
+    top: -100%;
+}
+}
+
+@keyframes ani10 {
+    0% {
+        background-position: left center;
+    }
+    50% {
+        background-position: right center;
+    }
+    100% {
+        background-position: left center;
+    }
+}
+.apply-btn-container{
+  position: absolute;
+  bottom: -2rem;
+  left: 35%;
+}
+.apply-btn{
+  padding: 2rem 10rem;
+  font-size: 1.8rem;
+  border-radius: 2rem;
+  background: var(--changeAndApply-btn-background);
+  border: none;
+  background-size: 200%;
+  background-position: 50% 50%;
+  animation: ani10 3s infinite;
+  color: var(--background-color);
+  position: relative;
+}
+.apply-btn::before{
+  content: url('assets/svg/arrow-right.svg');
+  position: absolute;
+  top: 35%;
+  left: 25%;
+  color: white;
+  filter: invert(1);
+  scale: 2;
+  animation: scaling 1s infinite;
+}
+.apply-btn::after{
+  content: url('assets/svg/arrow-left.svg');
+  position: absolute;
+  top: 35%;
+  right: 25%;
+  color: white;
+  filter: invert(1);
+  scale: 2;
+  animation: scaling 1s infinite;
+}
+@keyframes scaling {
+  0%{
+    scale: 2;
+  }
+  
+  50%{
+    scale: 3; 
+  }
+  100%{
+    scale: 2;
+  }
+  
+}
