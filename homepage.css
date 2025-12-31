@@ -170,7 +170,7 @@ p.details{
 }
 .card1{
   grid-area: left;
-  background: url('/assets/homepage/ai-generated-8775235_1920.png');
+  background: url('../assets/homepage/ai-generated-8775235_1920.png');
   background-position: center;
   background-size: 170%;
   /* background-repeat: no-repeat;
@@ -179,13 +179,13 @@ p.details{
   transition: all 2s ease; */
 }
 .card2{
-  background: url('/assets/homepage/ai-generated-8775232_1920.png');
+  background: url('../assets/homepage/ai-generated-8775232_1920.png');
   /* background-position: 75% 80%; */
   background-position: center;
   background-size: 150%;
 }
 .card3{
-  background: url('/assets/homepage/developer-8764523_1280.jpg');
+  background: url('../assets/homepage/developer-8764523_1280.jpg');
   background-position: center;
   background-size: 150%;
 }
